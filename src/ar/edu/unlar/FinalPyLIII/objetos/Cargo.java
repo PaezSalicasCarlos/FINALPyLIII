@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package objetos;
+package ar.edu.unlar.FinalPyLIII.objetos;
 
 import java.util.Objects;
 
@@ -11,19 +11,21 @@ import java.util.Objects;
  *
  * @author DjNiico
  */
-public class Turno {
+public class Cargo {
     private Integer id;
     private Integer codigo;
     private String descripcion;
 
-    public Turno() {
+    public Cargo() {
     }
 
-    public Turno(Integer id, Integer codigo, String descripcion) {
+    public Cargo(Integer id, Integer codigo, String descripcion) {
         this.id = id;
         this.codigo = codigo;
         this.descripcion = descripcion;
     }
+
+    
 
     
     
@@ -47,19 +49,23 @@ public class Turno {
         return descripcion;
     }
 
+      
     public void setDescripcion(String descripcion) {
+      
         this.descripcion = descripcion;
+    
     }
+    
 
     @Override
     public String toString() {
-        return  descripcion;
+        return descripcion ;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + Objects.hashCode(this.descripcion);
+        int hash = 5;
+        hash = 47 * hash + Objects.hashCode(this.descripcion);
         return hash;
     }
 
@@ -74,13 +80,17 @@ public class Turno {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Turno other = (Turno) obj;
+        final Cargo other = (Cargo) obj;
         if (!Objects.equals(this.descripcion, other.descripcion)) {
             return false;
         }
         return true;
     }
-    
+
+
+
+   
+
     
     
     
