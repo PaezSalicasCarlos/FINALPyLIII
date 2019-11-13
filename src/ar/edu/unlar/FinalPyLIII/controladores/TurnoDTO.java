@@ -152,7 +152,7 @@ String  query= "INSERT INTO turnos (codigo,descripcion) VALUES (?,?)";
     
     }
     
-   public Turno BusquedaTurno(Turno entidad,String a){
+   public Turno BusquedaTurno(String a){
        Turno turno=null;
        String filtros= ""+a+"_%";
        String  query= "SELECT * FROM turnos WHERE descripcion LIKE"+"'"+filtros+"'";

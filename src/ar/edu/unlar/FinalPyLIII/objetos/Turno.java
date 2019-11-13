@@ -53,13 +53,16 @@ public class Turno {
 
     @Override
     public String toString() {
-        return  descripcion;
+        return "Codigo= " + codigo + ", Descripcion= " + descripcion;
     }
+
+    
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 17 * hash + Objects.hashCode(this.descripcion);
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.codigo);
+        hash = 59 * hash + Objects.hashCode(this.descripcion);
         return hash;
     }
 
@@ -78,8 +81,13 @@ public class Turno {
         if (!Objects.equals(this.descripcion, other.descripcion)) {
             return false;
         }
+        if (!Objects.equals(this.codigo, other.codigo)) {
+            return false;
+        }
         return true;
     }
+
+    
     
     
     
